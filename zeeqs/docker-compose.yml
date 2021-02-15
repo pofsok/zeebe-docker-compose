@@ -23,7 +23,8 @@ services:
     container_name: zeeqs
     image: camunda/zeeqs:latest
     environment:
-      - zeebe.hazelcast.connection=zeebe:5701
+#       - zeebe.hazelcast.connection=zeebe:5701
+      - zeebe.client.worker.hazelcast.connection=zeebe:5701
     # volumes:
     #   - ./simple-monitor-application.yaml:/usr/local/zeebe/config/application.yaml
     ports:
